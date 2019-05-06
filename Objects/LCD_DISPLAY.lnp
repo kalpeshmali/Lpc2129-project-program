@@ -1,0 +1,15 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\buzzer_event.o"
+".\objects\command.o"
+".\objects\data.o"
+".\objects\delay.o"
+".\objects\display_string.o"
+".\objects\lcd_string_display.o"
+".\objects\main_program.o"
+".\objects\second_line_print_command.o"
+".\objects\first_line_print_command.c.o"
+--strict --scatter ".\Objects\LCD_DISPLAY.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LCD_DISPLAY.map" -o .\Objects\LCD_DISPLAY.axf
